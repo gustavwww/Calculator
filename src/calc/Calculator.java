@@ -4,6 +4,7 @@ import java.util.*;
 
 import static java.lang.Double.NaN;
 import static java.lang.Math.pow;
+import static java.lang.System.out;
 
 
 /*
@@ -116,13 +117,36 @@ class Calculator {
     // ---------- Tokenize -----------------------
 
     public List<String> tokenize(String expr) {
-
         List<String> temp = new ArrayList<>();
-
+        String tempString = "";
         for(int i = 0; i < expr.length(); i++)
         {
-            temp.add(Character.toString(expr.charAt(i)));
+            if(expr.charAt(i) != ' ')
+            {
+                if(isNumeric(Character.toString(expr.charAt(i))))
+                {
+                    tempString += expr.charAt(i);
+                }
+                else {
+                    if(tempString != "")
+                    {
+                        temp.add(tempString);
+                    }
+                    temp.add(Character.toString(expr.charAt(i)));
+                    tempString = "";
+                }
+                if(i + 1 > expr.length() - 1)
+                {
+                    if(tempString != "")
+                    {
+                        temp.add(tempString);
+                    }
+                }
+
+
+            }
         }
+        out.println(temp.toString());
         return temp;   // TODO
     }
 
