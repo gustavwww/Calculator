@@ -117,37 +117,40 @@ class Calculator {
     // ---------- Tokenize -----------------------
 
     public List<String> tokenize(String expr) {
-        List<String> temp = new ArrayList<>();
+
+        List<String> tokens = new ArrayList<>();
+
         String tempString = "";
-        for(int i = 0; i < expr.length(); i++)
-        {
-            if(expr.charAt(i) != ' ')
-            {
-                if(isNumeric(Character.toString(expr.charAt(i))))
-                {
+
+        for(int i = 0; i < expr.length(); i++) {
+
+            if(expr.charAt(i) != ' ') {
+                // Spaces ignoreras.
+
+                if(isNumeric(Character.toString(expr.charAt(i)))) {
+                    // Numeric
+
                     tempString += expr.charAt(i);
-                }
-                else {
-                    if(tempString != "")
-                    {
-                        temp.add(tempString);
+
+                } else {
+                    // Operand
+
+                    if(tempString != "") {
+                        tokens.add(tempString);
                     }
-                    temp.add(Character.toString(expr.charAt(i)));
+
+                    tokens.add(Character.toString(expr.charAt(i)));
                     tempString = "";
                 }
-                if(i + 1 > expr.length() - 1)
-                {
-                    if(tempString != "")
-                    {
-                        temp.add(tempString);
-                    }
+
+                if(i + 1 > expr.length() - 1 && tempString != "") {
+
+                    tokens.add(tempString);
                 }
-
-
             }
         }
-        out.println(temp.toString());
-        return temp;   // TODO
+
+        return tokens;
     }
 
     // TODO Possibly more methods
