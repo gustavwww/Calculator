@@ -66,7 +66,23 @@ class Calculator {
     // ------- Infix 2 Postfix ------------------------
 
     public List<String> infix2Postfix(List<String> tokens) {
+        Stack<String> tempStack = new Stack<>();
+        for (int i = 0; i < tokens.size(); i++) {
+            if (isNumeric(tokens.get(i))) {
+                tempStack.push(tokens.get(i));
+            }
+        }
+
         return null; // TODO
+    }
+
+    public static boolean isNumeric(String strNum) {
+        try {
+            double d = Double.parseDouble(strNum);
+        } catch (NumberFormatException | NullPointerException nfe) {
+            return false;
+        }
+        return true;
     }
 
 
@@ -100,7 +116,14 @@ class Calculator {
     // ---------- Tokenize -----------------------
 
     public List<String> tokenize(String expr) {
-        return null;   // TODO
+
+        List<String> temp = new ArrayList<>();
+
+        for(int i = 0; i < expr.length(); i++)
+        {
+            temp.add(Character.toString(expr.charAt(i)));
+        }
+        return temp;   // TODO
     }
 
     // TODO Possibly more methods
