@@ -1,89 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffd7f2c4-fa5b-4b46-a4d9-712c62e24176" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../calc/.idea/calc.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calc/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calc/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calc/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calc/calc.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calc/src/assignment3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calc/src/calc/Calculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calc/src/calc/REPL.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calc/src/calc/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../neighbours/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../neighbours/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../neighbours/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../neighbours/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../neighbours/.idea/neighbours.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../neighbours/.idea/neighbours.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../neighbours/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../neighbours/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../neighbours/neighbours.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../neighbours/neighbours.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../neighbours/src/Neighbours.java" beforeDir="false" afterPath="$PROJECT_DIR$/../neighbours/src/Neighbours.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../neighbours/src/assignment2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../neighbours/src/assignment2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pig/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pig/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pig/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pig/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pig/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pig/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pig/src/Pig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pig/src/Pig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pig/src/assignment1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../pig/src/assignment1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pong/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pong/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pong/.idea/pong.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../pong/.idea/pong.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pong/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pong/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pong/pong.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../pong/pong.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pong/src/assignment4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../pong/src/assignment4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pong/src/pong/event/Event.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pong/src/pong/event/EventService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pong/src/pong/model/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pong/src/pong/model/Ball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pong/src/pong/model/IPositionable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pong/src/pong/model/IPositionable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pong/src/pong/model/Paddle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pong/src/pong/model/Paddle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pong/src/pong/model/Pong.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pong/src/pong/model/Pong.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pong/src/pong/view/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pong/src/pong/view/Assets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pong/src/pong/view/PongGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pong/src/pong/view/PongGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pong/src/pong/view/theme/Cool.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pong/src/pong/view/theme/Cool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pong/src/pong/view/theme/Duckie.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pong/src/pong/view/theme/Duckie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pong/test/pong/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pong/test/pong/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/.idea/spaceinv3.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/assets/img/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/assets/img/battlecruiser.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/assets/img/bomb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/assets/img/bomber.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/assets/img/explosion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/assets/img/explosion2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/assets/img/flame.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/assets/img/frigate.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/assets/img/ground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/assets/img/gun.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/assets/img/rocket.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/assets/sound/explosion2.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/assets/sound/spacemusic.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/spaceinv.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/assignment4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/event/Event.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/event/EventService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/model/Gun.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/model/IPositionable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/model/SpaceInv.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/model/levels/ILevel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/model/levels/Level0.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/model/levels/LevelUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/model/projectiles/Bomb.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/model/projectiles/Rocket.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/model/ships/AbstractSpaceShip.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/model/ships/BattleCruiser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/model/ships/Bomber.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/model/ships/Frigate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/model/ships/ShipFormation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/model/statics/Ground.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/model/statics/OuterSpace.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/view/Assets.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/view/Explosion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/view/SpaceInvGUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/src/spaceinv/view/SpaceInvMenu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spaceinv3/test/spaceinv/model/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pig/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../pig/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pig/pig.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../pig/pig.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../xer/OUT/week6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../xer/OUT/week6/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ffd7f2c4-fa5b-4b46-a4d9-712c62e24176" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,9 +14,6 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FileEditorManager">
-    <leaf />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -108,58 +23,15 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/calc/calculator.fxml" />
-        <option value="$PROJECT_DIR$/src/calc/calcgui.fxml" />
-        <option value="$PROJECT_DIR$/src/Test.form" />
-        <option value="$PROJECT_DIR$/src/calc/WebCalcServer.java" />
-        <option value="$PROJECT_DIR$/src/calc/CalculatorGUI.java" />
-        <option value="$PROJECT_DIR$/src/calc/REPL.java" />
-        <option value="$PROJECT_DIR$/src/calc/Test.java" />
-        <option value="$PROJECT_DIR$/src/calc/Calculator.java" />
-        <option value="$PROJECT_DIR$/src/assignment3.txt" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1248" />
-    <option name="height" value="876" />
-  </component>
+  <component name="ProjectId" id="1R0sO0aFZvnqLr7thnQU2WbyF9k" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="calculator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="calculator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calculator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="calculator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pong" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -182,7 +54,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CalculatorGUI">
+  <component name="RunManager" selected="Application.WebCalcServer">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -337,102 +209,20 @@
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1250" height="1024" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23627287" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Nl-Palette" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Designer" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29933482" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991131" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3292683" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Properties" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
-      <window_info anchor="right" id="Maven" order="9" />
-    </layout>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/calc/calculator.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/calc/calcgui.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/Test.form" />
-    <entry file="file://$PROJECT_DIR$/src/Test.java" />
-    <entry file="file://$PROJECT_DIR$/src/calc/CalculatorGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/calc/REPL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/calc/WebCalcServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/calc/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="148" column="39" selection-start-line="148" selection-start-column="39" selection-end-line="148" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/calc/Calculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="93" selection-start-line="93" selection-end-line="93" />
-          <folding>
-            <element signature="e#1280#1281#0" expanded="true" />
-            <element signature="e#1312#1313#0" expanded="true" />
-            <element signature="e#1905#1906#0" expanded="true" />
-            <element signature="e#1936#1937#0" expanded="true" />
-            <element signature="e#2588#2589#0" expanded="true" />
-            <element signature="e#2621#2622#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>
