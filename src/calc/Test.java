@@ -37,7 +37,7 @@ class Test {
         t("2 *( 1+10) ", "2 * ( 1 + 10 )");
         t("(1 +2) /2 *( 1+10) ", "( 1 + 2 ) / 2 * ( 1 + 10 )");
 
-/*
+
         // Infix to postfix -----------------------
         i2p("1+10", "1 10 +");
         i2p("1+2+3", "1 2 + 3 +");
@@ -51,6 +51,7 @@ class Test {
         i2p("(1+2)*3", "1 2 + 3 *");
         i2p("2^(1+1)", "2 1 1 + ^");
 
+        /*
         // Evaluation ------------------------------
         // A value
         e("123", 123);
@@ -131,6 +132,7 @@ class Test {
     void t(String expr, String expected) {
         List<String> list = calculator.tokenize(expr);
         String result = String.join(" ", list);
+        out.println(list.toString());
         out.println(result.equals(expected));
     }
 
@@ -139,6 +141,7 @@ class Test {
         List<String> tokens = calculator.tokenize(infix);
         List<String> postfix = calculator.infix2Postfix(tokens);
         String result = String.join(" ", postfix);
+        out.println(postfix.toString());
         out.println(result.equals(expected));
     }
 

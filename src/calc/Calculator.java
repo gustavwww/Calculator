@@ -4,6 +4,7 @@ import java.util.*;
 
 import static java.lang.Double.NaN;
 import static java.lang.Math.pow;
+import static java.lang.Math.toRadians;
 import static java.lang.System.out;
 
 
@@ -67,22 +68,131 @@ class Calculator {
     // ------- Infix 2 Postfix ------------------------
 
     public List<String> infix2Postfix(List<String> tokens) {
-        Stack<String> tempStack = new Stack<>();
+
+        Stack<String> operatorStack = new Stack<>();
+        Stack<String> postfixStack = new Stack<>();
+
         for (int i = 0; i < tokens.size(); i++) {
+
             if (isNumeric(tokens.get(i))) {
-                tempStack.push(tokens.get(i));
+
+                postfixStack.push(tokens.get(i));
+
+            } else {
+
+                fixStacks(operatorStack, postfixStack, tokens.get(i));
+
             }
+
         }
 
-        return null; // TODO
+        for (int i = operatorStack.size(); i > 0; i--) {
+
+            if (operatorStack.get(operatorStack.size() - 1).equalsIgnoreCase("(") || operatorStack.get(operatorStack.size() - 1).equalsIgnoreCase(")")) {
+
+                operatorStack.pop();
+            } else {
+
+                postfixStack.push(operatorStack.pop());
+            }
+
+        }
+
+        return postfixStack;
+    }
+
+    enum OPERATION {
+
+        POW(3),
+        MULT_DIV(2),
+        PLUS_MINUS(1),
+
+        PARANTESIS(4);
+
+        int priority;
+
+        OPERATION(int i) {
+            this.priority = i;
+        }
+    }
+
+    OPERATION getOperationByString(String operator) {
+
+        if (operator.equalsIgnoreCase("^")) {
+
+            return OPERATION.POW;
+        } else if (operator.equalsIgnoreCase("*") || operator.equalsIgnoreCase("/")) {
+
+            return OPERATION.MULT_DIV;
+        } else if (operator.equalsIgnoreCase("+") || operator.equalsIgnoreCase("-")) {
+
+            return OPERATION.PLUS_MINUS;
+        }
+
+        return OPERATION.PARANTESIS;
+    }
+
+    void fixStacks(Stack<String> operatorStack, Stack<String> postfixStack, String addingToken) {
+
+
+        while (true) {
+
+            if (operatorStack.empty()) {
+
+                operatorStack.push(addingToken);
+                break;
+            }
+
+            OPERATION lastOperator = getOperationByString(operatorStack.get(operatorStack.size() - 1));
+            OPERATION addingOp = getOperationByString(addingToken);
+
+            if (addingOp.priority == 4) {
+                // Add everything between parantesis to postfix.
+
+                if (addingToken.equalsIgnoreCase(")")) {
+
+                    if (operatorStack.get(operatorStack.size() - 1).equalsIgnoreCase("(")) {
+
+                        operatorStack.pop();
+                        break;
+                    }
+
+                    postfixStack.push(operatorStack.pop());
+                } else {
+
+                    operatorStack.push(addingToken);
+                    break;
+                }
+
+
+            } else if (addingOp.priority <= lastOperator.priority && lastOperator.priority != 4) {
+                // Operator too small - push last operator to postfix.
+
+                postfixStack.push(operatorStack.pop());
+            } else {
+                // Else push to operator stack and break loop.
+
+                operatorStack.push(addingToken);
+                break;
+            }
+
+        }
+
+
+
+
     }
 
     public static boolean isNumeric(String strNum) {
+
         try {
+
             double d = Double.parseDouble(strNum);
         } catch (NumberFormatException | NullPointerException nfe) {
+
             return false;
         }
+
         return true;
     }
 
