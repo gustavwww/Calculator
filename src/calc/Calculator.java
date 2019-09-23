@@ -3,6 +3,7 @@ package calc;
 import java.util.*;
 
 import static java.lang.Double.NaN;
+import static java.lang.Double.doubleToLongBits;
 import static java.lang.Math.pow;
 import static java.lang.Math.toRadians;
 import static java.lang.System.out;
@@ -35,14 +36,72 @@ class Calculator {
             return NaN;
         }
         List<String> tokens = tokenize(expr);
-        List<String> postfix = infix2Postfix(tokens);
+        Stack<String> postfix = infix2Postfix(tokens);
         return evalPostfix(postfix);
     }
 
     // ------  Evaluate RPN expression -------------------
 
-    public double evalPostfix(List<String> postfix) {
-        return 0;  // TODO
+    public double evalPostfix(Stack<String> postfix) {
+
+        out.println("Postfix: " + postfix.toString());
+
+        Stack<String> tempPostfix = (Stack<String>) postfix.clone();
+
+        double[] operands = new double[2];
+        int operandCount = 0;
+
+        for (int i = 0; i < postfix.size(); i++) {
+
+            out.println("Loop nr: " + i);
+            if (isNumeric(postfix.get(i))) {
+
+                out.println("isNumeric called, got: " + postfix.get(i));
+                if (operandCount < 2) {
+
+                    operands[operandCount] = Double.parseDouble(postfix.get(i));
+
+                    out.println("Result array: " + Arrays.toString(operands));
+
+                    operandCount++;
+                }
+
+            }
+
+
+            // Got two new operands, operate them.
+            // Get next operator and make operation.
+
+            String operator = popNextOperator(tempPostfix);
+
+            operands[0] = applyOperator(operator, operands[0], operands[1]);
+            out.println("Applying > " + operands[0] + " " + operator + " " + operands[1]);
+
+            operandCount = 1;
+
+
+
+        }
+
+        return operands[0];
+    }
+
+    String popNextOperator(Stack<String> postfix) {
+
+        for (int i = 0; i < postfix.size(); i++) {
+
+            if (!isNumeric(postfix.get(i))) {
+
+                String operator = postfix.get(i);
+
+                postfix.removeElementAt(i);
+
+                return operator;
+            }
+
+        }
+
+        return "";
     }
 
 
@@ -51,23 +110,23 @@ class Calculator {
             case "+":
                 return d1 + d2;
             case "-":
-                return d2 - d1;
+                return d1 - d2;
             case "*":
                 return d1 * d2;
             case "/":
-                if (d1 == 0) {
+                if (d2 == 0) {
                     throw new IllegalArgumentException(DIV_BY_ZERO);
                 }
-                return d2 / d1;
+                return d1 / d2;
             case "^":
-                return pow(d2, d1);
+                return pow(d1, d2);
         }
         throw new RuntimeException(OP_NOT_FOUND);
     }
 
     // ------- Infix 2 Postfix ------------------------
 
-    public List<String> infix2Postfix(List<String> tokens) {
+    public Stack<String> infix2Postfix(List<String> tokens) {
 
         Stack<String> operatorStack = new Stack<>();
         Stack<String> postfixStack = new Stack<>();

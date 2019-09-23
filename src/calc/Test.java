@@ -1,9 +1,6 @@
 package calc;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.List;
+import java.util.*;
 
 import static java.lang.System.out;
 
@@ -28,6 +25,7 @@ class Test {
 
         // Uncomment line by line to test
 
+        out.println("Tokenize method:");
         // Tokenization ---------------------------
         t("1 + 10", "1 + 10");  // Arguments are input and expected output
         t("1+ 10", "1 + 10");   // Expected is in fact a list [ "1", "+", "10"]
@@ -38,6 +36,7 @@ class Test {
         t("(1 +2) /2 *( 1+10) ", "( 1 + 2 ) / 2 * ( 1 + 10 )");
 
 
+        out.println("Infix2Postfix method:");
         // Infix to postfix -----------------------
         i2p("1+10", "1 10 +");
         i2p("1+2+3", "1 2 + 3 +");
@@ -51,10 +50,10 @@ class Test {
         i2p("(1+2)*3", "1 2 + 3 *");
         i2p("2^(1+1)", "2 1 1 + ^");
 
-        /*
+        out.println("Evaluation method:");
         // Evaluation ------------------------------
         // A value
-        e("123", 123);
+       // e("123", 123);
 
         // Basic operations
         e("1 + 10", 11);
@@ -95,6 +94,7 @@ class Test {
         e(" 1 ^ 1 ^ 1 ^ 1  - 1", 0);
         e(" 4 - 2 - 1 ^ 2 ", 1);
 
+        out.println("Exceptions:");
         // Exceptions -----------------------------------
         try {
             e("1 / 0 ", 0);   // 0 just a dummy
@@ -148,8 +148,9 @@ class Test {
     // Evaluation
     void e(String infix, double expected) {
         List<String> tokens = calculator.tokenize(infix);
-        List<String> postfix = calculator.infix2Postfix(tokens);
+        Stack<String> postfix = calculator.infix2Postfix(tokens);
         double result = calculator.evalPostfix(postfix);
+        out.println("Result: " + result);
         out.println(result == expected);
     }
 
