@@ -64,6 +64,7 @@ class Test {
         e("60 * 0", 0);
         e("3 / 2", 1.5);  // See exception for div by zero
         e("1 / 2", 0.5);
+        e("4^3*2", 128);
         e("2 ^ 4 ", 16);
         e("2 ^ 0 ", 1);
 

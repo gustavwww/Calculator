@@ -49,35 +49,43 @@ class Calculator {
         Stack<String> tempPostfix = (Stack<String>) postfix.clone();
 
         double[] operands = new double[2];
-        int operandCount = 0;
+        int operationsCount = 1;
+        int[] blacklistNumber = new int[postfix.size()];
 
         for (int i = 0; i < postfix.size(); i++) {
 
-            out.println("Loop nr: " + i);
-            if (isNumeric(postfix.get(i))) {
 
-                out.println("isNumeric called, got: " + postfix.get(i));
-                if (operandCount < 2) {
+            if(!isNumeric(postfix.get(i))) {
+                String operator = postfix.get(i);
 
-                    operands[operandCount] = Double.parseDouble(postfix.get(i));
-
-                    out.println("Result array: " + Arrays.toString(operands));
-
-                    operandCount++;
+                if (operationsCount == 1) {
+                    operands[0] = Double.parseDouble(postfix.get(i - 2));
+                    operands[1] = Double.parseDouble(postfix.get(i - 1));
+                    blacklistNumber[i - 2] = 1;
+                    blacklistNumber[i - 1] = 1;
+                    operationsCount++;
                 }
+                else {
+                    for(int j = 0; j < postfix.size(); j++) {
 
+                        int index = i - j;
+                        if(isNumeric(postfix.get(index))) {
+                            if (blacklistNumber[index] == 1) {
+                                continue;
+                            } else {
+                                operands[1] = Double.parseDouble(postfix.get(index));
+                                blacklistNumber[index] = 1;
+                                operationsCount++;
+                                break;
+                            }
+                        }
+
+                    }
+                }
+                operands[0] = applyOperator(operator, operands[0], operands[1]);
             }
 
 
-            // Got two new operands, operate them.
-            // Get next operator and make operation.
-
-            String operator = popNextOperator(tempPostfix);
-
-            operands[0] = applyOperator(operator, operands[0], operands[1]);
-            out.println("Applying > " + operands[0] + " " + operator + " " + operands[1]);
-
-            operandCount = 1;
 
 
 
@@ -90,7 +98,7 @@ class Calculator {
 
         for (int i = 0; i < postfix.size(); i++) {
 
-            if (!isNumeric(postfix.get(i))) {
+            if (!isNumeric(postfix.get(i)) && !postfix.get(i).equalsIgnoreCase(" ")) {
 
                 String operator = postfix.get(i);
 
@@ -103,7 +111,17 @@ class Calculator {
 
         return "";
     }
+    boolean hasOperatorLeft(Stack<String> operatorStack) {
+        for(int i = 0; i < operatorStack.size(); i++)
+        {
+            if(!isNumeric(operatorStack.get(i)))
+            {
+                return true;
 
+            }
+        }
+        return false;
+    }
 
     double applyOperator(String op, double d1, double d2) {
         switch (op) {
@@ -293,31 +311,30 @@ class Calculator {
 
         for(int i = 0; i < expr.length(); i++) {
 
-            if(expr.charAt(i) != ' ') {
-                // Spaces ignoreras.
+           // Spaces ignoreras.
 
-                if(isNumeric(Character.toString(expr.charAt(i)))) {
-                    // Numeric
+            if(isNumeric(Character.toString(expr.charAt(i)))) {
+                // Numeric
 
-                    tempString += expr.charAt(i);
+                tempString += expr.charAt(i);
 
-                } else {
-                    // Operand
+            } else if(expr.charAt(i) != ' '){
+                // Operand
 
-                    if(tempString != "") {
-                        tokens.add(tempString);
-                    }
-
-                    tokens.add(Character.toString(expr.charAt(i)));
-                    tempString = "";
-                }
-
-                if(i + 1 > expr.length() - 1 && tempString != "") {
-
+                if(tempString != "") {
                     tokens.add(tempString);
                 }
+
+                tokens.add(Character.toString(expr.charAt(i)));
+                tempString = "";
+            }
+
+            if(i + 1 > expr.length() - 1 && tempString != "") {
+
+                tokens.add(tempString);
             }
         }
+
 
         return tokens;
     }
