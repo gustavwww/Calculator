@@ -44,100 +44,50 @@ class Calculator {
 
     public double evalPostfix(Stack<String> postfix) {
 
-        out.println("Postfix: " + postfix.toString());
-
-        Stack<String> tempPostfix = (Stack<String>) postfix.clone();
-
-        double[] operands = new double[2];
-        int operationsCount = 1;
-        int[] blacklistNumber = new int[postfix.size()];
+        Stack<Double> operands = new Stack<Double>();
 
         for (int i = 0; i < postfix.size(); i++) {
-
 
             if(!isNumeric(postfix.get(i))) {
                 String operator = postfix.get(i);
 
-                if (operationsCount == 1) {
-                    operands[0] = Double.parseDouble(postfix.get(i - 2));
-                    operands[1] = Double.parseDouble(postfix.get(i - 1));
-                    blacklistNumber[i - 2] = 1;
-                    blacklistNumber[i - 1] = 1;
-                    operationsCount++;
+                if (operands.size() < 2) {
+                    throw new IllegalArgumentException(MISSING_OPERAND);
                 }
-                else {
-                    for(int j = 0; j < postfix.size(); j++) {
 
-                        int index = i - j;
-                        if(isNumeric(postfix.get(index))) {
-                            if (blacklistNumber[index] == 1) {
-                                continue;
-                            } else {
-                                operands[1] = Double.parseDouble(postfix.get(index));
-                                blacklistNumber[index] = 1;
-                                operationsCount++;
-                                break;
-                            }
-                        }
+                double d1 = operands.pop();
+                double d2 = operands.pop();
 
-                    }
-                }
-                operands[0] = applyOperator(operator, operands[0], operands[1]);
-            }
+                double result = applyOperator(operator, d1, d2);
+                operands.push(result);
 
+            } else {
+                // Operand found
 
-
-
-
-        }
-
-        return operands[0];
-    }
-
-    String popNextOperator(Stack<String> postfix) {
-
-        for (int i = 0; i < postfix.size(); i++) {
-
-            if (!isNumeric(postfix.get(i)) && !postfix.get(i).equalsIgnoreCase(" ")) {
-
-                String operator = postfix.get(i);
-
-                postfix.removeElementAt(i);
-
-                return operator;
+                operands.push(Double.parseDouble(postfix.get(i)));
             }
 
         }
 
-        return "";
-    }
-    boolean hasOperatorLeft(Stack<String> operatorStack) {
-        for(int i = 0; i < operatorStack.size(); i++)
-        {
-            if(!isNumeric(operatorStack.get(i)))
-            {
-                return true;
-
-            }
-        }
-        return false;
+        return operands.pop();
     }
 
     double applyOperator(String op, double d1, double d2) {
+
         switch (op) {
             case "+":
                 return d1 + d2;
             case "-":
-                return d1 - d2;
+                return d2 - d1;
             case "*":
                 return d1 * d2;
             case "/":
-                if (d2 == 0) {
+                if (d1 == 0) {
                     throw new IllegalArgumentException(DIV_BY_ZERO);
                 }
-                return d1 / d2;
+                return d2 / d1;
             case "^":
-                return pow(d1, d2);
+                return pow(d2, d1);
         }
         throw new RuntimeException(OP_NOT_FOUND);
     }
@@ -319,7 +269,7 @@ class Calculator {
                 tempString += expr.charAt(i);
 
             } else if(expr.charAt(i) != ' '){
-                // Operand
+                // Operator
 
                 if(tempString != "") {
                     tokens.add(tempString);
