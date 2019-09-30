@@ -161,7 +161,6 @@ class Calculator {
 
     void fixStacks(Stack<String> operatorStack, Stack<String> postfixStack, String addingToken) {
 
-
         while (true) {
 
             if (operatorStack.empty()) {
@@ -170,7 +169,7 @@ class Calculator {
                 break;
             }
 
-            OPERATION lastOperator = getOperationByString(operatorStack.get(operatorStack.size() - 1));
+            String lastOperator = operatorStack.get(operatorStack.size() - 1);
             OPERATION addingOp = getOperationByString(addingToken);
 
             if (addingOp.priority == 4) {
@@ -192,7 +191,7 @@ class Calculator {
                 }
 
 
-            } else if (addingOp.priority <= lastOperator.priority && lastOperator.priority != 4) {
+            } else if (shouldPopLastOperator(lastOperator, addingToken)) {
                 // Operator too small - push last operator to postfix.
 
                 postfixStack.push(operatorStack.pop());
@@ -234,6 +233,23 @@ class Calculator {
         } else {
             throw new RuntimeException(OP_NOT_FOUND);
         }
+    }
+
+    boolean shouldPopLastOperator(String lastOperator, String addingOperator) {
+
+        OPERATION lastOp = getOperationByString(lastOperator);
+        OPERATION addingOp = getOperationByString(addingOperator);
+
+        if (lastOp.priority == 4) {
+            return false;
+        }
+
+        if (getAssociativity(addingOperator) == Assoc.RIGHT) {
+
+            return lastOp.priority > addingOp.priority;
+        }
+
+        return lastOp.priority >= addingOp.priority;
     }
 
     Assoc getAssociativity(String op) {
